@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Calculator JS</title>
+  </head>
+  <body>
+    <div class="screen">0</div>
+    <div class="buttons"></div>
+
+    <script>
+      const btns = document.querySelector(".buttons");
+
+      // prettier-ignore
+      const btnsArray = ["C", "<", "/", " ",
+                            7, 8, 9, "X",
+                            4, 5, 6, "-",
+                            1,2,3, "+",
+                             " ", 0, ".", "="];
+      for (let i = 0; i < btnsArray.length; i++) {
+        const btn = document.createElement("button");
+        btn.setAttribute("class", "btn");
+        btn.innerHTML = btnsArray[i];
+        btns.appendChild(btn);
+      }
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>
